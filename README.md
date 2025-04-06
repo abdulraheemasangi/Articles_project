@@ -40,20 +40,20 @@ cd articles_project
 
 
 2. **Create and activate virtual environment**
-```bash
+
 python -m venv myenv
 myenv\Scripts\activate   # On Windows
 
 3. **Install dependencies**
-```bash
+
 pip install -r requirements.txt
 
 4.**Run migrations**
-```bash
+
 python manage.py migrate
 
 5.**Run the server**
-```bash
+
 python manage.py runserver
 
 You will See http://127.0.0.1:8000/
