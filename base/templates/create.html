@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<div class="create-container">
+
+    <form action="" method="POST">
+
+        <h2>Create Articles</h2>
+
+        {% csrf_token %}
+
+
+        <label for="">Title</label>
+        <input type="text" name="title" id="">
+
+        <label for="">Description</label>
+        <input type="text" name="desc" id="">
+
+        <button type="submit" >Create</button>
+
+
+
+    </form>
+
+</div>
+
+{% endblock content %}

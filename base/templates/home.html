@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+
+
+{% for i in data %}
+
+<div class="articls">
+
+
+    <h3>{{i.title | upper}}</h3>
+    <p>{{i.desc | truncatewords:10}}</p>
+    <a href="{% url 'read' i.id %}">Read</a>
+    
+    <a href="{% url 'delete' i.id %}" class="delete-btn" style="background-color: rgba(205, 17, 55, 0.886);">Delete</a>
+
+
+</div>
+
+{% endfor %}
+
+
+
+
+
+
+{% endblock content %}

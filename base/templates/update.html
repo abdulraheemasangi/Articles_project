@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<form method="POST" class="update-form">
+    {% csrf_token %}
+
+    <label for="title">Update Title</label>
+    <input type="text" name="title" value="{{ data.title }}">
+
+    <label for="desc">Update Description</label>
+    <textarea name="desc" >{{ data.desc }}</textarea>
+
+    <button type="submit">Update</button>
+</form>
+
+{% endblock content %}

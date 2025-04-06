@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!-- {{data}} -->
+
+<div class="read-container">
+
+    <h3>{{data.title | upper }}</h3>
+    <p>{{data.desc}}</p>
+
+    <a href="{% url 'home' %}">Back</a>
+    <a href="{% url 'update' data.id %}">Update</a>
+
+</div>
+
+
+
+{% endblock content %}

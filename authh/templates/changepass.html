@@ -1,0 +1,88 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<style>
+    
+.changepass-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.changepass-container h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+}
+
+.changepass-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.changepass-container label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+.changepass-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.changepass-container input:focus {
+    border-color: #000;
+}
+
+.changepass-container button {
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.changepass-container button:hover {
+    background-color: #1a1a1a;
+}
+
+
+</style>
+
+<div class="changepass-container">
+
+    <h2>Change Your Password</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Enter New Password</label>
+
+        <input type="password" name="password" required>
+
+        <button type="submit">Change password</button>
+
+    </form>
+
+</div>
+
+{% endblock content %}

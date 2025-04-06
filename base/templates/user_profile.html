@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="profile-details">
+
+    <h2 class="welcome-message">Welcome {{ request.user.first_name }} {{ request.user.last_name }}</h2>
+
+    <div class="profile-item">
+        <label>Full Name</label>
+        <span>{{ request.user.first_name }} {{ request.user.last_name }}</span>
+    </div>
+
+    <div class="profile-item">
+        <label>First Name</label>
+        <span>{{ request.user.first_name }}</span>
+    </div>
+
+    <div class="profile-item">
+        <label>Last Name</label>
+        <span>{{ request.user.last_name }}</span>
+    </div>
+
+    <div class="profile-item">
+        <label>Username</label>
+        <span>{{ request.user.username }}</span>
+    </div>
+
+    <div class="profile-item">
+        <label>Email</label>
+        <span>{{ request.user.email }}</span>
+    </div>
+
+    <a class="logout-button" href="{% url 'user_logout' %}">Logout</a>
+    <a class="changepass-button" href="{% url 'changepass' %}">Change you password</a>
+    <a class="update-button" href="{% url 'updateprofile' %}">Update Profile </a>
+    <a class="home-button" href="{% url 'home' %}">Back To Home </a>
+
+</div>
+
+{% endblock content %}

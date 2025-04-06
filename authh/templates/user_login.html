@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="login-container">
+
+    <h2>Login</h2>
+
+    {% if message %}
+        <p class="error-message">Wrong password or User not exists Please register.</p>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" class="input-field" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="input-field" required>
+
+        <button type="submit" class="login-button">Login</button>
+    </form>
+
+</div>
+
+{% endblock content %}

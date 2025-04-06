@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ /* Styling this nav bar */
+
+.hover-color:hover {
+    color: red;
+  }
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292727;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    
+}
+
+.links a:hover {
+       
+    color: #007bff;
+}
+
+
+/* stylings the articles in home */
+
+.articls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin:20px 100px;
+    border-radius: 8px;
+    background-color:#f4f4f4;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.articls h3 {
+    font-size:28px;
+    color: #061c34;
+    margin-bottom: 10px;
+}
+
+.articls p {
+    font: size 20px;
+    color: #3f3f3f;
+    line-height: 1.5;
+}
+
+.articls a {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;  
+    color: #fff;  
+    text-decoration: none;  
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.articls a:hover {
+    background-color: #0056b3;  
+    transform: scale(1.05);  
+}
+
+.read-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.read-container h3 {
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.read-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    /* transition: background 0.3s ease; */
+}
+
+.read-container a:hover {
+    background: #0056b3;
+    transform: scale(1.05);  
+}
+
+
+
+
+/* styling the create  */
+.create-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.create-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.create-container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.create-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.create-container input:focus {
+    border: 1px solid #007bff;
+}
+
+.create-container button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.create-container button:hover {
+    background: #0056b3;
+}
+
+.update-form {
+    width: 50%;
+    margin: auto;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.update-form input,
+.update-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.update-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.update-form button {
+    margin-top: 15px;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.update-form button:hover {
+    background: #0056b3;
+}
+
+
+
+/* Login Page Styles */
+
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.error-message {
+    color: #d00;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #333;
+}
+
+
+/* register page styling */
+
+
+.register-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 35px;
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+}
+
+.error-message {
+    color: #d00;
+    background-color: #ffe6e6;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-field {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.login-button {
+    padding: 14px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #222;
+}
+
+
+
+/* Styling profile */
+
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-details {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease-in-out;
+}
+
+.welcome-message {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 35px;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-item label {
+    font-weight: 600;
+    color: #333333;
+    flex: 1;
+}
+
+.profile-item span {
+    color: #555555;
+    flex: 2;
+    text-align: right;
+    word-break: break-word;
+}
+
+/* Buttons group layout */
+.profile-details a {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-details a:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .profile-details {
+        padding: 25px;
+    }
+
+    .profile-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-item span {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .profile-details a {
+        width: 100%;
+        text-align: center;
+    }
+}
