@@ -40,87 +40,116 @@ nav {
 
 /* stylings the articles in home */
 
+.search-container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+.search-container input[type="submit"] {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Section Headers */
+h2 {
+    text-align: center;
+    color: #061c34;
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Article Container */
 .articls {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     border: 1px solid #ddd;
     padding: 20px;
-    margin:20px 100px;
-    border-radius: 8px;
-    background-color:#f4f4f4;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 100px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
 }
 
+.articls:hover {
+    transform: scale(1.01);
+}
 
+/* Title Styling */
 .articls h3 {
-    font-size:28px;
+    font-size: 24px;
     color: #061c34;
     margin-bottom: 10px;
-}
-
-.articls p {
-    font: size 20px;
-    color: #3f3f3f;
-    line-height: 1.5;
-}
-
-.articls a {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007bff;  
-    color: #fff;  
-    text-decoration: none;  
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.articls a:hover {
-    background-color: #0056b3;  
-    transform: scale(1.05);  
-}
-
-.read-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.read-container h3 {
-    font-size: 24px;
-    color: #333;
     text-transform: uppercase;
+}
+
+/* Description Styling */
+.articls p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.read-container p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.read-container a {
+/* Button Links */
+.articls a {
     display: inline-block;
-    padding: 10px 20px;
-    background: #007bff;
-    color: #fff;
+    margin-right: 10px;
+    margin-top: 5px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    /* transition: background 0.3s ease; */
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
-.read-container a:hover {
-    background: #0056b3;
-    transform: scale(1.05);  
+.articls a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
+/* Specific delete button style if not handled separately */
+.delete-btn {
+    background-color: rgba(205, 17, 55, 0.886) !important;
+}
+
+.delete-btn:hover {
+    background-color: rgba(180, 0, 35, 0.9) !important;
+}
 
 
 

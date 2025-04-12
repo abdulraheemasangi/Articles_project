@@ -4,23 +4,56 @@
 {% block content %}
 
 
-
-{% for i in data %}
-
-<div class="articls">
-
-
-    <h3>{{i.title | upper}}</h3>
-    <p>{{i.desc | truncatewords:10}}</p>
-    <a href="{% url 'read' i.id %}">Read</a>
+<div class="search-container">
     
-    <a href="{% url 'delete' i.id %}" class="delete-btn" style="background-color: rgba(205, 17, 55, 0.886);">Delete</a>
-
+    <form action="">
+        
+        <input type="text"  placeholder="Search The Article" name="querry">
+        
+        <input type="submit"  value="search" >
+        
+    </form>
 
 </div>
 
-{% endfor %}
+{% if request.GET.querry %}
 
+    <h2>Search Result  </h2>
+
+    {% for i in search %}
+
+        <div class="articls">
+
+
+            <h3>{{i.title | upper}}</h3>
+            <p>{{i.desc | truncatewords:10}}</p>
+            <a href="{% url 'read' i.id %}">Read</a>
+            <a href="{% url 'home' %}">Back</a>
+    
+        </div>
+
+    {% empty %}
+        <p>No matching Articles found..!</p>
+    {% endfor %}
+        
+{% else %}
+
+        <h2>All Articles </h2>
+
+    {% for i in data %}
+
+        <div class="articls">
+
+        <h3>{{i.title | upper}}</h3>
+        <p>{{i.desc | truncatewords:10}}</p>
+        <a href="{% url 'read' i.id %}">Read</a>
+        <a href="{% url 'delete' i.id %}" class="delete-btn" style="background-color: rgba(205, 17, 55, 0.886);">Delete</a>
+
+        </div>
+
+    {% endfor %}
+    
+{% endif %}
 
 
 

@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from base.models import Article_model
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
+from django.db.models import Q
 # Create your views here.
 
 # article_data=[
@@ -70,9 +70,23 @@ def home(request):
 
     data = Article_model.objects.all().order_by('-id')  
 
+        # search 
+
+    querry=request.GET.get('querry')
+    if querry :
+        search=Article_model.objects.filter(
+            Q(title__icontains=querry) | Q(desc__icontains=querry)
+        )
+    else:
+        search=Article_model.objects.all()
+
     context = {
-        'data': data
+        'data': data,
+        'search':search
     }
+
+
+
     return render(request, 'home.html', context)
 
 
