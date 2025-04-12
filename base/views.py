@@ -170,6 +170,5 @@ def updateprofile(request):
     return render(request, 'updateprofile.html', {'user': user})
 
 
-@login_required(login_url='user_login')
 def about(request):
     return render(request,'about.html')
